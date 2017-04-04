@@ -50,7 +50,11 @@ const handleSocialAuth = (socialUrl) => {
   });
 };
 
-crashReporter.start();
+crashReporter.start({
+  productName: "SpectacleEditor",
+  companyName: "FormidableLabs",
+  uploadToServer: false
+});
 
 if (process.env.NODE_ENV === "development") {
   require("electron-debug")();
